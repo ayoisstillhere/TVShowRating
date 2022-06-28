@@ -29,6 +29,6 @@ public class TvShowController {
 
     @DeleteMapping(path="{Id}")
     public void deleteTvShow(@PathVariable("Id") Long Id) {
-        tvShowService.deleteStudent(Id);
+        tvShowService.deleteTvShow(Id);
     }
 }
