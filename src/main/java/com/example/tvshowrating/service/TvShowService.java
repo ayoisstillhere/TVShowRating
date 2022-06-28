@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 import java.time.LocalDate;
 import java.time.Month;
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class TvShowService {
@@ -18,5 +19,13 @@ public class TvShowService {
 
     public List<TvShow> getTvShows() {
         return tvShowRepository.findAll();
+    }
+
+    public void addTvShow(TvShow tvShow) {
+        Optional<TvShow> tvShowOptional = tvShowRepository.findByName(tvShow.getName());
+        if(tvShowOptional.isPresent()) {
+            throw new IllegalStateException("TV show already exists here");
+        }
+        tvShowRepository.save(tvShow);
     }
 }
