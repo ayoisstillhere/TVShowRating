@@ -3,9 +3,7 @@ package com.example.tvshowrating.controller;
 import com.example.tvshowrating.model.TvShow;
 import com.example.tvshowrating.service.TvShowService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -22,5 +20,10 @@ public class TvShowController {
     @GetMapping
     public List<TvShow> getTvShows() {
         return tvShowService.getTvShows();
+    }
+
+    @PostMapping
+    public void addTvShow(@RequestBody TvShow tvShow) {
+        tvShowService.addTvShow(tvShow);
     }
 }
