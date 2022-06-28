@@ -14,7 +14,7 @@ public class TvShow {
     )
     @GeneratedValue(
             strategy = GenerationType.SEQUENCE,
-            generator = "student_sequence"
+            generator = "tvshow_sequence"
     )
     private Long id;
     private String name;
