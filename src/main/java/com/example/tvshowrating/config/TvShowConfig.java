@@ -3,6 +3,7 @@ package com.example.tvshowrating.config;
 import com.example.tvshowrating.model.TvShow;
 import com.example.tvshowrating.repository.TvShowRepository;
 import org.springframework.boot.CommandLineRunner;
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 import java.time.LocalDate;
@@ -11,6 +12,7 @@ import java.util.List;
 
 @Configuration
 public class TvShowConfig {
+    @Bean
     CommandLineRunner commandLineRunner(TvShowRepository repository) {
 
         return args -> {
