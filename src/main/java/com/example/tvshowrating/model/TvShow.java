@@ -1,8 +1,21 @@
 package com.example.tvshowrating.model;
 
+import javax.persistence.*;
 import java.time.LocalDate;
 
+@Entity
+@Table
 public class TvShow {
+    @Id
+    @SequenceGenerator(
+            name="tvshow_sequence",
+            sequenceName = "tvshow_sequence",
+            allocationSize = 1
+    )
+    @GeneratedValue(
+            strategy = GenerationType.SEQUENCE,
+            generator = "student_sequence"
+    )
     private Long id;
     private String name;
     private String network;
