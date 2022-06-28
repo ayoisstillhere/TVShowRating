@@ -31,4 +31,14 @@ public class TvShowController {
     public void deleteTvShow(@PathVariable("Id") Long Id) {
         tvShowService.deleteTvShow(Id);
     }
+
+    @PutMapping(path = "{Id}")
+    public void updateTvShow(
+            @PathVariable("Id") Long Id,
+            @RequestParam(required = false) String name,
+            @RequestParam(required = false) String network,
+            @RequestParam(required = false) String rating
+    ) {
+        tvShowService.updateTvShow(Id, name, network, rating);
+    }
 }
