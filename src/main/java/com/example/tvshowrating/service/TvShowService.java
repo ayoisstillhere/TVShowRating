@@ -28,4 +28,12 @@ public class TvShowService {
         }
         tvShowRepository.save(tvShow);
     }
+
+    public void deleteTvShow(Long id) {
+        boolean exists = tvShowRepository.existsById(id);
+        if (!exists) {
+            throw new IllegalStateException("tvshow with id " + " does not exist");
+        }
+        tvShowRepository.deleteById(id);
+    }
 }
