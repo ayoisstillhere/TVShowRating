@@ -27,7 +27,7 @@ public class TvShowConfig {
                    2L,
                    "The Boys",
                    "Amazon Prime",
-                   LocalDate.of(2019, Month.FEBRUARY, 15),
+                   LocalDate.of(2019, Month.JULY, 26),
                    5.0
            );
            repository.saveAll(List.of(brelly, boys));
