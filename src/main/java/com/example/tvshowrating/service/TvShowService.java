@@ -1,11 +1,13 @@
 package com.example.tvshowrating.service;
 
 import com.example.tvshowrating.model.TvShow;
+import org.springframework.stereotype.Service;
 
 import java.time.LocalDate;
 import java.time.Month;
 import java.util.List;
 
+@Service
 public class TvShowService {
     public List<TvShow> getTvShows() {
         return List.of(

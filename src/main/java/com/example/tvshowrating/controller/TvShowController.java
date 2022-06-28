@@ -2,6 +2,7 @@ package com.example.tvshowrating.controller;
 
 import com.example.tvshowrating.model.TvShow;
 import com.example.tvshowrating.service.TvShowService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -13,6 +14,7 @@ import java.util.List;
 public class TvShowController {
     private final TvShowService tvShowService;
 
+    @Autowired
     public TvShowController(TvShowService tvShowService) {
         this.tvShowService = tvShowService;
     }
