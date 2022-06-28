@@ -1,2 +1,28 @@
-package com.example.tvshowrating.service;public class TvShowService {
+package com.example.tvshowrating.service;
+
+import com.example.tvshowrating.model.TvShow;
+
+import java.time.LocalDate;
+import java.time.Month;
+import java.util.List;
+
+public class TvShowService {
+    public List<TvShow> getTvShows() {
+        return List.of(
+                new TvShow(
+                1L,
+                "Umbrella Academy",
+                "Netflix",
+                LocalDate.of(2019, Month.FEBRUARY,15),
+                5.0
+                ),
+                new TvShow(
+                        2L,
+                        "The Boys",
+                        "Amazon Prime",
+                        LocalDate.of(2019, Month.FEBRUARY,15),
+                        5.0
+                )
+        );
+    }
 }
